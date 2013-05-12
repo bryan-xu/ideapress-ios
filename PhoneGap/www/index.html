@@ -45,6 +45,7 @@
                 <div data-role="content">
                     <p>I'm first in the source order so I'm shown as the page.</p>
                     <p>View internal page called <a href="#bar">bar</a></p>
+                    <a href="#" data-role="button" data-icon="star" id="btnStart">Star button</a>
                     <p><a href="spec.html">next page</a></p>
                 </div><!-- /content -->
                 
@@ -74,6 +75,12 @@
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
             app.initialize();
+            $(function() {
+              $('#btnStart').click(function() {
+                 $.mobile.navigate("#bar");                  
+              });
+            });
+            
         </script>
     </body>
 </html>
